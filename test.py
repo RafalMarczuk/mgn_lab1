@@ -4,6 +4,7 @@ from mail import EmailExtractor
 
 
 class EmailExtractorTestCase(unittest.TestCase):
+
     def setUp(self) -> None:
         self.data = [
             # email, is_student, is_male, name, surname
@@ -50,3 +51,5 @@ class EmailExtractorTestCase(unittest.TestCase):
                 extractor = EmailExtractor(email)
                 # expect
                 self.assertEqual(surname, extractor.get_surname())
+
+
